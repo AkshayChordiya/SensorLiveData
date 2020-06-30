@@ -1,6 +1,6 @@
 package com.akshay.sensorlivedata
 
-import android.arch.lifecycle.LiveData
+import androidx.lifecycle.LiveData
 import android.content.Context
 import android.hardware.Sensor
 import android.hardware.SensorEvent

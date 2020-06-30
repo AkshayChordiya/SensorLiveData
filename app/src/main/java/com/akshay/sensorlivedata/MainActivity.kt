@@ -1,9 +1,9 @@
 package com.akshay.sensorlivedata
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.Observer
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Get SensorViewModel
-        val sensorViewModel = ViewModelProviders.of(this).get(SensorViewModel::class.java)
+        val sensorViewModel = ViewModelProvider(this).get(SensorViewModel::class.java)
         // Observe the sensor vale
         sensorViewModel.getSensorData().observe(this, Observer {
             value.text = it.toString()
