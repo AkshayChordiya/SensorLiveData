@@ -1,7 +1,7 @@
 package com.akshay.sensorlivedata
 
 import android.app.Application
-import android.arch.lifecycle.AndroidViewModel
+import androidx.lifecycle.AndroidViewModel
 
 class SensorViewModel(application: Application) : AndroidViewModel(application) {
     private val sensorLiveData = SensorLiveData(application)
